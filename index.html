@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>C2 Server</title>
+
+    <style>
+
+        body {
+            background: #111111;
+            color: #f4f4f4;
+            font-family: 'Roboto', sans-serif;
+        }
+
+      .container {
+        display: grid;
+        grid-template-areas:
+          'header header header header'
+          'content content content sidebar'
+          'box-1 box-2 box-3 box-4'
+          'welcome welcome welcome welcome'
+          'modsTitle modsTitle modsTitle modsTitle'
+          'modsText modsList modsList modsList'
+          'rolesTitle rolesTitle rolesTitle rolesTitle'
+          'mcTitle mcContent mcContent mcContent'
+          'pcTitle pcContent pcContent pcContent'
+          'ftlTitle ftlContent ftlContent ftlContent'
+          'alTitle alContent alContent alContent'
+          'auTitle auContent auContent auContent'
+          'radioTitle radioTitle radioTitle radioTitle'
+          'radioLeft radioLeft radioLeft radioRight'
+          'requestAssetsTitle requestAssetsTitle requestAssetsTitle requestAssetsTitle'
+          'requestAssets requestAssets requestAssets requestAssets'
+
+
+          'footer footer footer footer';
+        grid-gap: 1rem;
+      }
+
+      .header,
+      .content,
+      .sidebar,
+      .box-1,
+      .box-2,
+      .box-3,
+      .box-4,
+      .welcome,
+      .modsTitle,
+      .modsText,
+      .modsList,
+      .rolesTitle,
+      .mcTitle,
+      .mcContent,
+      .pcTitle,
+      .pcContent,
+      .ftlTitle,
+      .ftlContent,
+      .alTitle,
+      .alContent,
+      .auTitle,
+      .auContent,     
+      .radioTitle,
+      .radioLeft,
+      .radioRight,
+      .requestAssetsTitle,
+      .requestAssets,
+      
+      
+      .footer {
+        border: 1px #ccc solid;
+        padding: 0.5rem;
+      }
+
+      .header {
+        grid-area: header;
+      }
+
+      .content {
+        grid-area: content;
+      }
+
+      .sidebar {
+        grid-area: sidebar;
+      }
+
+      .box-1 {
+        grid-area: box-1;
+      }
+
+      .box-2 {
+        grid-area: box-2;
+      }
+
+      .box-3 {
+        grid-area: box-3;
+      }
+
+      .welcome {
+        grid-area: welcome;
+      }
+
+      .modsTitle {
+        grid-area: modsTitle;
+        text-align: center;
+      }
+
+            .modsText {
+        grid-area: modsText;
+      }
+
+            .modsList {
+        grid-area: modsList;
+      }
+
+            .rolesTitle {
+        grid-area: rolesTitle;
+        text-align: center;
+      }
+
+            .mcTitle {
+        grid-area: mcTitle;
+      }
+
+            .mcContent {
+        grid-area: mcContent;
+      }
+
+            .pcTitle {
+        grid-area: pcTitle;
+      }
+
+                  .pcContent {
+        grid-area: pcContent;
+      }
+
+                  .ftlTitle {
+        grid-area: ftlTitle;
+      }
+
+                  .ftlContent {
+        grid-area: ftlContent;
+      }
+
+                  .alTitle {
+        grid-area: alTitle;
+      }
+
+                  .alContent {
+        grid-area: alContent;
+      }
+
+      .auTitle {
+        grid-area: auTitle;
+      }
+
+      .auContent {
+        grid-area: aucontent;
+      }
+
+      .radioTitle {
+        grid-area: radioTitle;
+        text-align: center;
+
+      }
+
+      .radioLeft {
+        grid-area: radioLeft;
+      }
+
+      .radioRight {
+        grid-area: radioRight;
+      }
+
+      .requestAssetsTitle {
+        grid-area: requestAssetsTitle;
+        text-align: center;
+
+      }
+
+      .requestAssets {
+        grid-area: requestAssets;
+      }
+
+
+
+
+      .footer {
+        grid-area: footer;
+        text-align: center;
+      }
+
+
+      @media(max-width: 500px) {
+        .container {
+          grid-template-areas:
+          'header'
+          'welcome'
+          'modsTitle'
+          'modsText'
+          'modsList'
+          'rolesTitle'
+          'mcTitle'
+          'mcContent'
+          'pcTitle' 
+          'pcContent'
+          'ftlTitle' 
+          'ftlContent'
+          'alTitle' 
+          'alContent'
+          'auTitle' 
+          'auContent'
+          'radioTitle'
+          'radioLeft'
+          'radioRight'
+          'requestAssetsTitle'
+          'requestAssets'
+
+
+
+
+          'footer';
+        }
+      }
+
+    </style>
+  </head>
+
+
+
+
+  <body>
+    <div class="container">
+
+        <!-- header -->
+      <header class="header"><h1>C2 Server</h1></header>
+
+      <!-- <section class="content"> -->
+        <!-- <h3>Welcome To My Site</h3>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo suscipit
+          reprehenderit aperiam repudiandae voluptatibus, expedita ex temporibus
+          eos et mollitia velit vel molestias sint dolore at doloremque neque
+          minima optio ad tempore quisquam perferendis esse non. Aliquam illum
+          doloremque architecto! Rem voluptas at sunt sed enim eius laborum
+          dolores quaerat?
+        </p>
+      </section>
+
+      <aside class="sidebar">
+        <h3>Contact Us</h3>
+        <ul>
+          <li>Some Company</li>
+          <li>50 Main st, Boston MA</li>
+          <li>something@something.com</li>
+          <li>555-555-5555</li>
+        </ul>
+      </aside>
+      <div class="box-1">
+        <h3>Heading</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+          quisquam at veritatis a labore quod illo dolorem fugiat quas
+          repellendus omnis odio eligendi ab, dolor necessitatibus, saepe
+          aliquid quaerat aperiam.
+        </p>
+      </div>
+      <div class="box-2">
+        <h3>Heading</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+          quisquam at veritatis a labore quod illo dolorem fugiat quas
+          repellendus omnis odio eligendi ab, dolor necessitatibus, saepe
+          aliquid quaerat aperiam.
+        </p>
+      </div>
+      <div class="box-3">
+        <h3>Heading</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+          quisquam at veritatis a labore quod illo dolorem fugiat quas
+          repellendus omnis odio eligendi ab, dolor necessitatibus, saepe
+          aliquid quaerat aperiam.
+        </p>
+      </div>
+      <div class="box-4">
+        <h3>Heading</h3>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores
+          quisquam at veritatis a labore quod illo dolorem fugiat quas
+          repellendus omnis odio eligendi ab, dolor necessitatibus, saepe
+          aliquid quaerat aperiam.
+        </p>
+      </div> -->
+
+
+
+      <div class="welcome">
+        <h3>Welcome</h3>
+        <p>
+            Welcome to the C2 Server. This simple website lays out the rules and guideline for our style of play.
+            We are currently working through a KP Liberation Lythium campaign.
+        </p>
+        </div>
+
+<div class="modsTitle">
+  <h3>Required Mods</h3>
+</div>
+
+<div class="modsText">
+  <p>We have a limited number of mods in use. pleas eensure yu have all of these loaded on your system before joining the game</p>
+</div>
+
+<div class="modsList">
+  <li>mod1</li>
+  <li>mod1</li>
+  <li>mod1</li>
+  <li>mod1</li>
+  <li>mod1</li>
+  <li>mod1</li>
+  <li>mod1</li>
+  <li>mod1</li>
+  <li>mod1</li>
+  <li>mod1</li>
+
+
+</div>
+
+
+
+
+    <div class="rolesTitle">
+      <h3>Mission Roles</h3>
+    </div>
+
+    <div class="mcTitle">
+      <h3>[MC] Mission Command</h3>
+    </div>
+
+    <div class="mcContent">
+      <p>
+        This is a challenging role. This person needs to always have a good grasp of mission progress, through taking to the various element leads. In terms of comms, the MC will have a direct line to a Platoon Commander (via Primary ShWv), and to the Airbourn Lead (via Primary LoWv).
+
+        So, Mission Command will always be close enough (ideally) to use ShWv (short wave) radio with the PC (Platoon Commander). The MC will also keep in contact with the AL (Airbourne Lead) using LoWv (long wave).
+      </p>
+    </div>
+
+
+    <div class="pcTitle">
+      <h3>[PC] Platoon Command</h3>
+    </div>
+
+    <div class="pcContent">
+      <p>
+        This role manages the direct instruction and tactical command of all FTL elements, as well as his/her own squad. This role is a combination of both combat and micro-instruction (e.g. check out the green building on the left side of that junction, or, “keep pushing north until you reach enemy contact”). 
+
+        The level of communication between the PC and FTL is likely to be frequent and detailed. This may lead to a secondary channel being implemented. 
+
+        They ensure that the higher level directives are being executed on the ground. They also ensure that any air elements are well informed.
+      </p>
+    </div>
+
+    <div class="ftlTitle">
+      <h3>[FTL] Fire Team Lead</h3>
+    </div>
+
+    <div class="ftlContent">
+      <p>
+        Fire Team Leads are at the forefront of the action. They are required to direct their teams directly into the fight. Use of C2 here is highly recommended as a command tool. An FTL will normally have a localised objective set by the Platoon Lead. This could be “push down the street and hold the next junction”, or, move east through the neighbourhood to support FT2” etc. The PC essentially sets the tactical direction, with the FTLs as the fighting force. As said above, the PC will also have units assigned to him/her, possibly specialist (AA, Medical, Engineering etc), but equally could be a standard fire team.
+      </p>
+    </div>
+
+    <div class="alTitle">
+      <h3>[AL] Airborne Lead</h3>
+    </div>
+
+    <div class="alContent">
+      <p>
+        This person is responsible for troop transport (both human and AI). They are also responsible for creation and deployment of any new resupply units. They also bring in any required ammo supplies. 
+
+        The AL will have both ShWv and LoWv enabled. Primarily their contact will be directly with the MC. However ShWv can be used to communicate with the Platoon Commander, or FTLs (Fire Team Leads) where appropriate. For example, when requesting specific validation / suitability of an LZ, to request new smoke etc, it might be preferable for the pilot and TFL to speak directly.      </p>
+    </div>
+
+
+
+    <div class="radioTitle">
+      <h3>Radio Communications</h3>
+    </div>
+
+    <div class="radioLeft">
+      <p>We use TFAR for in-game communications, routed via a TS service kindly provided by Woofer. 
+        As a general rule, shortwave radios are used by combat troops, longwave radios by transport and resupply elements, with command party to most converstations st all times.</p>
+        <p>You are expected to have tested your radio equipment before missions, as it can be problematc fixing comms issues during a mission. If you need any assistance setting these up, make sure you reach out to someone beforehand so we can get everything set up and working nice.
+        </p>
+        </div>
+
+    <div class="radioRight">
+      <h3>Current Frequencies</h3>
+      <p>
+        Short Wave // Channel 1 Frequency 50
+        Long Wave // Channel 1 Frequency 51
+       </p>
+    </div>
+
+
+    <div class="requestAssetsTitle">
+      <h3>Requesting Assets During Operations</h3>
+    </div>
+
+    <div class="requestAssets">
+      <p>Casualties and troop resupplies are inevitable. If you are an FTL and require new units for your squad, you should relay this to your PC, 
+        who will in turn relay this to MC, who will in turn relay this to the Airbourne Lead. 
+
+        You are encouraged to only request what you need (realism and frames).
+        
+        When you are relaying your requirements up the chain, it is also important  that you relay exactly where these units are to be deployed. 
+        This can be at a pre-arranged location (probably safe), or a dynamic LZ within the AO if deployment/resupply is urgent. It is good practice 
+        to inform the AC of any likely threats in the area, ideally marking directions with green/IR smoke for the LZ and red smoke to indicate the 
+        direction of the threat.
+        
+        Requesting deployment near to enemy troops is high-risk, and while these requests will always aim to be provisioned, pilots are able to abort 
+        if they feel that conditions are unsuitable. In an abortive drop, the Airbourne element would advise and request a secondary LZ. 
+        
+        Lastly, pilots and ground forces alike are expected to know all pre-designated LZs ahead of mission-start, so any deployment to these will not 
+        normally need visual marking.
+      </p>
+      </div>
+
+
+
+
+        <!--  footer-->
+      <footer class="footer"><p>Copyright &copy; 2019</p></footer>
+
+
+    </div>
+  </body>
+</html>
+
+
